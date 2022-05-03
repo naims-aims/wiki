@@ -1,0 +1,51 @@
+site_name: NAIMS-AIMS Wiki
+site_url: https://wiki.naimsaims.org
+repo_url: https://github.com/naims-aims/wiki
+theme:
+  name: 'material'
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      primary: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Fear is the path to the dark side.
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Let there be light
+extra:
+  social:
+    - icon: 'fontawesome/brands/github'
+      link: 'https://github.com/naims-aims'
+    - icon: 'fontawesome/brands/twitter'
+      link: 'https://twitter.com/naims-aims'
+    - icon: 'fontawesome/solid/globe'
+      link: 'https://naimsaims.org/'
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+  - footnotes
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra_javascript:
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
